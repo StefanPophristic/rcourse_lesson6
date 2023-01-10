@@ -5,6 +5,8 @@
 # Script for cleaning data
 ############
 
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
 ## LOAD PACKAGES ####
 library(dplyr)
 library(purrr)
@@ -56,3 +58,4 @@ data_accuracy_clean = data_clean %>%
 data_rt_clean = data_accuracy_clean %>%
   filter(accuracy == "1") %>%
   mutate(rt_log10 = log10(rt))
+

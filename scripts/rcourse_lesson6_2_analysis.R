@@ -5,6 +5,8 @@
 # Script for Analysis
 ############
 
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
 ## READ IN DATA ####
 source("rcourse_lesson6_cleaning.R")
 
@@ -131,3 +133,4 @@ rt_log10_congruencyxhalf.lmer = lmer(rt_log10 ~ congruency_contrast * half_contr
 
 rt_log10_congruencyxhalf.anova = anova(rt_log10.lmer, rt_log10_congruencyxhalf.lmer)
 rt_log10_congruencyxhalf.anova
+

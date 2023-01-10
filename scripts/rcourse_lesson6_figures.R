@@ -5,6 +5,8 @@
 # Script for figures
 ############
 
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
 ## READ IN DATA ####
 source("rcourse_lesson6_cleaning.R")
 
@@ -78,3 +80,4 @@ rt_log10_boxplot.plot = ggplot(data_rt_figs, aes(x = half, y = rt_log10, fill = 
 pdf("../figures/rt_log10.pdf")
 rt_log10_boxplot.plot
 dev.off()
+

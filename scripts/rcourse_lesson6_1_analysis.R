@@ -5,6 +5,8 @@
 # Script for analysis
 ############
 
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
 ## READ IN DATA ####
 source("../scripts/rcourse_lesson6_cleaning.R")
 
@@ -55,3 +57,4 @@ rt_log10.lmer_sum
 # Get coefficients and save
 rt_log10.lmer_coef = coef(rt_log10.lmer)
 rt_log10.lmer_coef
+
